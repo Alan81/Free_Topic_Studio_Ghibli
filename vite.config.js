@@ -3,20 +3,14 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Free_Topic_Studio_Ghibli/', // Важно! Имя вашего репозитория
-css: {
-    devSourcemap: true,
-    preprocessorOptions: {
-      css: {
-        
-      }
-    }
-  },
+  base: '/Free_Topic_Studio_Ghibli/',
   build: {
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name].[hash][extname]',
+        // Явно указываем имена файлов
+        entryFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
       }
     }
   }
