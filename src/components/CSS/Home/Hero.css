@@ -141,7 +141,7 @@ body {
     display: block;
 }
 .poster-card-center {
-    max-width: 350px;
+    max-width: 350px !important;
     transform: scale(1.0);
     z-index: 2;
 }

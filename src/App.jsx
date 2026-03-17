@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'  // измененный импорт
 import { useState } from 'react'
 import Home from './components/Pages/Home/Home'
 import CatalogSection from './components/Pages/Catalog/CatalogSection'
@@ -10,7 +10,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
+    <HashRouter>  {/* Заменили BrowserRouter на HashRouter */}
       <ScrollToTop/>
 
       <Routes>
@@ -21,7 +21,7 @@ function App() {
 
       <ScrollToTopButton/>
       
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
