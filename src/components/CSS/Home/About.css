@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@1,100..900&display=swap');
+
+:root{
+    --White: #ffffff;
+    --Black: #000000;
+    --Dark-Ocean: #1C434A;
+    --Green:#057569;
+    --Light-greay-blue: #8FC6B7;
+    --Celestial-azure: #E8FFFD;
+
+    --ff-Cinzel-Decorative: 'Cinzel Decorative', 'sant-serif';
+    --ff-Albert-Sans: 'Albert Sans', 'sans-serif';
+    --fs-1: 0.75rem;
+    --fs-2: 1rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.5rem;
+    --fs-5: 1.75rem;
+    --fs-6: 2rem;
+
+    --py-1: 0.75rem;
+    --py-2: 1rem;
+    --py-3: 1.25rem;
+    --py-4: 1.5rem;
+    --py-5: 1.75rem;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style: none;}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {display: block;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {width: 100%;}
+
+button {cursor: pointer;}
+
+html {
+    font-family: var(--ff-Cinzel-Decorative);
+    font-size: var(--fs-2);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--White);
+    color: var(--Black);
+    font-size: var(--fs-4);
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:focus-visible {outline-offset: 4px;}
+
+::-webkit-scrollbar{
+    width: 1rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track { background: hsl(0, 0%, 95%);}
+
+::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%);}
+
+::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%);}
+
+/* =========================================================== */
+
+.outContainer {
+    margin-top: -25rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================ */
+
+.bg-out-pattern {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+}
+
+/* =========================================================== */
+
+.AboutUsRow{
+    margin: 8rem 0;
+    position: relative; 
+}
+
+.bg-out-banner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    z-index: 5;
+}
+
+/* =========================================================== */
+
+.outBannerText {
+    background: var(--Celestial-azure);
+    max-width: 1000px;
+    width: 90%;     margin: -20rem auto 0;
+    position: relative;
+    z-index: 10;
+    padding: 3rem;
+    border-radius: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================== */
+
+
+
+.out-text-first {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+    max-width: 900px;
+    font-size: var(--fs-5) ;
+    color: var(--Dark-Ocean);
+}
+
+/* =========================================================== */
+
+.second-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.bg-group-image {
+    max-width: 230px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.out-text-second {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+    max-width: 650px;
+    flex: 1;
+    font-size: var(--fs-5);
+    color: var(--Dark-Ocean);
+}
+
+/* ============================ MEDIA =============================== */
+
+@media screen and (max-width: 1400px) {
+    .outMainRow {
+        margin: 10rem 0;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .outMainRow {
+        margin: 15rem 0;
+        margin-bottom: 5rem;
+    }
+
+    .outBannerText {
+        max-width: 900px;
+        margin: -17rem auto 0; 
+    }
+
+    .out-text-first {
+        font-weight: 400;
+        line-height: 1.2;
+        max-width: 800px;
+        font-size: var(--fs-4);
+    }
+
+    .out-text-second {
+        max-width: 550px;
+        font-size: var(--fs-4);
+    }
+
+    .bg-group-image {
+        max-width: 200px; 
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .AboutUsRow {
+        margin: 7rem 0;
+    }
+
+    .outBannerText {
+        max-width: 800px;
+        margin: -17rem auto 0; 
+    }
+
+    .second-text {
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .outMainRow {
+        margin: 15rem 0;
+        margin-bottom: 5rem;
+    }
+
+    .outBannerText {
+        max-width: 700px;
+        margin: -17rem auto 0; 
+    }
+
+    .out-text-first {
+        line-height: 1.4;
+        max-width: 800px;
+        font-size: var(--fs-3);
+    }
+
+    .out-text-second {
+        line-height: 1.4;
+        max-width: 550px;
+        font-size: var(--fs-3);
+    }
+
+    .bg-group-image {
+        max-width: 180px; 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .AboutUsRow {
+        margin: 5rem 0;
+    }
+
+    .outBannerText {
+        margin: -12rem auto 0; 
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .outBannerText {
+        padding: 2rem;
+        max-width: 600px;
+    }
+
+    .out-text-first {
+        line-height: 1.4;
+        max-width: 500px;
+        font-size: var(--fs-2);
+    }
+
+    .out-text-second {
+        line-height: 1.4;
+        max-width: 450px;
+        font-size: var(--fs-2);
+    }
+
+    .bg-group-image {
+        max-width: 150px; 
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .bg-out-pattern {
+        width: 85%;
+    }
+    
+    .AboutUsRow {
+        margin: 4rem 0;
+    }
+
+    .outBannerText {
+        max-width: 550px;
+        border-radius: 1.5rem;
+    }
+
+    .second-text {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .bg-group-image {
+        max-width: 130px; 
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .outMainRow {
+        margin: 25rem 0;
+        margin-bottom: 0;
+    }
+
+    .outBannerText {
+        max-width: 500px;
+        margin: -10rem auto 0; 
+    }
+
+    .out-text-first {
+        line-height: 1.6;
+        max-width: 450px;
+        font-size: var(--fs-1);
+    }
+
+    .out-text-second {
+        line-height: 1.6;
+        max-width: 400px;
+        font-size: var(--fs-1);
+    }
+
+    .bg-group-image {
+        max-width: 100px; 
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .outMainRow {
+        margin: 22rem 0;
+    }
+
+    .outBannerText {
+        max-width: 400px;
+        margin: -8rem auto 0; 
+    }
+
+    .out-text-first {
+        line-height: 1.6;
+        max-width: 450px;
+        font-size: 0.5rem;
+    }
+
+    .out-text-second {
+        line-height: 1.6;
+        max-width: 400px;
+        font-size: 0.5rem;
+    }
+
+    .second-text {
+        margin-top: 0rem;
+    }
+
+    .bg-group-image {
+        max-width: 80px; 
+    }
+
+}

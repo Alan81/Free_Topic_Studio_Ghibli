@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+
+:root{
+    --White: #ffffff;
+    --Black: #000000;
+    --Dark-Ocean: #1C434A;
+    --Green:#057569;
+    --Light-greay-blue: #8FC6B7;
+
+    --ff-Cinzel-Decorative: 'Cinzel Decorative', 'sant-serif';
+    --fs-1: 0.75rem;
+    --fs-2: 1rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.5rem;
+    --fs-5: 1.75rem;
+
+    --py-1: 0.75rem;
+    --py-2: 1rem;
+    --py-3: 1.25rem;
+    --py-4: 1.5rem;
+    --py-5: 1.75rem;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style: none;}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {display: block;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {width: 100%;}
+
+button {cursor: pointer;}
+
+html {
+    font-family: var(--ff-Cinzel-Decorative);
+    font-size: var(--fs-2);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--White);
+    color: var(--Black);
+    font-size: var(--fs-4);
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:focus-visible {outline-offset: 4px;}
+
+::-webkit-scrollbar{
+    width: 1rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track { background: hsl(0, 0%, 95%);}
+
+::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%);}
+
+::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%);}
+
+
+/* ================================================================= */
+
+.logContainer {
+    padding: 30rem 0;
+}
+
+
+/* ================================================================= */
+
+.bg-log-banner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+/* ================================================================ */
+
+.logGenresGrid {
+    padding: 5rem ;
+}
+
+.logGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.logGrid li {
+    background-color: var(--Green);
+    padding: 5px 30px;
+    color: var(--White);
+    border-radius: 2rem;
+    font-family: 'Engravers MT';
+    font-size: var(--fs-4);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.logGrid li:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+/* ================================================================= */
+
+.TopPattern,
+.BottomPattern{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+/* ================================================================== */
+
+.logPosterGrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: -4rem auto;
+    position: relative;
+    z-index: 5;
+}
+
+.logPosterCard {
+    flex: 0 1 auto;
+    max-width: 320px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logPosterCard:hover {
+    transform: scale(1.05);
+    z-index: 20;
+}
+
+.logPosterImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* ================================================================ */
+
+.logButton {
+    display: flex;
+    margin-top: 7rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.logButtonText {
+    background-color: var(--Green);
+    opacity: 0.9;
+    letter-spacing: 2px;
+    color: var(--White);
+    padding: 15px 50px;
+    border-radius: 3rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    will-change: transform; 
+}
+
+.logButtonText:hover {
+    transform: scale(1.1); /* Увеличение на 10% */
+}
+
+/* ==================================================== */
+
+@media screen and (max-width: 1500px) {
+    .logPosterCard {
+        max-width: 295px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .logContainer {
+        padding: 17rem 0;
+    }
+
+    .logGrid{
+        gap: 2rem;
+    }
+
+    .logPosterCard {
+        max-width: 275px;
+    }
+}
+
+@media screen and (max-width: 1300px) {    
+
+    .logGrid li{
+        font-size: 1.3rem;
+    }
+
+    .logPosterCard {
+        max-width: 255px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .logContainer{
+        padding: 14rem 0;
+    }
+
+    .logGrid li{
+        font-size: var(--fs-3);
+    }
+
+    .logPosterCard {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .logPosterGrid {
+        margin-top: -3rem;
+    }
+
+    .logPosterCard {
+        max-width: 285px;
+    }
+
+    .logButtonText {
+        font-size: var(--fs-3);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .logGrid li {
+        font-size: var(--fs-2);
+    }
+
+    .logPosterCard {
+        max-width: 255px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .logContainer {
+        padding: 10rem 0;
+    }
+
+    .logPosterGrid{
+        margin-top: -2rem;
+    }
+
+    .logPosterCard {
+        max-width: 225px;
+    }
+
+    .logButtonText {
+        font-size: var(--fs-2);
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .logGrid {
+        gap: 1.5rem;
+    }
+
+    .logGrid li {
+        padding: 5px 20px;
+    }
+
+    .logPosterCard {
+        max-width: 195px;
+    }
+
+    .logButtonText {
+        padding: 10px 35px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .logContainer {
+        padding: 5rem 0;
+    }
+
+    .logGenresGrid {
+        padding: 3rem;
+    }
+
+    .logGrid li{
+        font-size: var(--fs-1);
+    }
+
+    .logPosterGrid {
+        margin-top: -1rem;
+    }
+
+    .logPosterCard {
+        max-width: 155px;
+    }
+
+    .logButtonText {
+        font-size: var(--fs-1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .logGrid li{
+        font-size: var(--fs-1);
+        padding: 5px 15px;
+    }
+
+    .logPosterCard {
+        max-width: 135px;
+    }
+
+    .logButton {
+        margin-top: 6rem;
+    }
+
+    .logButtonText {
+        font-size: var(--fs-1);
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .logGrid li{
+        font-size: var(--fs-1);
+        padding: 5px 15px;
+    }
+
+    .logPosterCard {
+        max-width: 255px;
+    }
+
+    .logButton {
+        margin-top: 6rem;
+    }
+
+    .logButtonText {
+        font-size: var(--fs-1);
+        padding: 10px 25px;
+    }
+}

@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+
+:root{
+    --White: #ffffff;
+    --Black: #000000;
+    --Dark-Ocean: #1C434A;
+    --Light-greay-blue: #8FC6B7;
+
+    --ff-Cinzel-Decorative: 'Cinzel Decorative', 'sant-serif';
+    --fs-1: 0.75rem;
+    --fs-2: 1rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.5rem;
+    --fs-5: 1.75rem;
+
+    --py-1: 0.75rem;
+    --py-2: 1rem;
+    --py-3: 1.25rem;
+    --py-4: 1.5rem;
+    --py-5: 1.75rem;
+    --py-6: 2rem;
+    --py-7: 3rem;
+    --py-8: 4rem;
+    --py-9: 5rem;
+    --py-10: 6rem;
+    --py-11: 7rem;
+    --py-12: 8rem;
+    --py-13: 9rem;
+    --py-14: 10rem;
+    --py-15: 11rem;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style: none;}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {display: block;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {width: 100%;}
+
+button {cursor: pointer;}
+
+html {
+    font-family: var(--ff-Cinzel-Decorative);
+    font-size: var(--fs-2);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--White);
+    color: var(--Black);
+    font-size: var(--fs-4);
+    font-weight: 700;
+    line-height: 1.6;
+    padding-top: 0;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+:focus-visible {outline-offset: 4px;}
+
+::-webkit-scrollbar{
+    width: 1rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track { background: hsl(0, 0%, 95%);}
+
+::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%);}
+
+::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%);}
+
+/* ==================================================================== */
+
+.catalog-container{
+    position: relative;
+    padding-top: 6rem;
+    padding-left: var(--py-4);
+    padding-right: var(--py-4);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.catalog-has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ==================================================================== */
+
+.catalog-navbar-wrapper {
+    position: relative;
+    z-index: 9999;
+}
+
+.catalog-navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000; 
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+}
+
+.catalog-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--py-2);
+    margin-left: clamp(1rem, 5vw, var(--py-5));
+    margin-right: clamp(1rem, 5vw, var(--py-5));
+    position: relative;
+    z-index: 10001;
+}
+
+.catalog-logo{
+    max-width: 380px;
+    transition: transform 0.5s ease;
+}
+
+
+.catalog-navbar-wrapper 
+.catalog-menu-option {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.catalog-navbar-wrapper.catalog-navbar-scrolled .catalog-navbar-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: -6rem;
+    padding-bottom: 1rem;
+}
+
+.catalog-navbar-wrapper.catalog-navbar-scrolled 
+.catalog-menu-option {
+    color: var(--Dark-Ocean);
+    text-shadow: none;
+}
+
+
+.catalog-navbar-wrapper.catalog-navbar-scrolled 
+.catalog-logo {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(13%) saturate(1627%) hue-rotate(128deg) brightness(92%) contrast(101%);
+}
+
+.catalog-logo:hover {
+    transform: scale(1.2);
+    transition: 0.4s ease;
+}
+
+.catalog-section-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.catalog-menu{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.catalog-menu-item {
+    position: relative;
+}
+
+.catalog-menu-option{
+    display: inline-block;
+    padding-top: var(--py-2);
+    padding-bottom: var(--py-2);
+    padding-left: var(--py-2);
+    padding-right: var(--py-2);
+    font-size: var(--fs-5);
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+
+.catalog-menu-option:hover{ 
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+
+.catalog-menu-option::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    transition: transform 0.3s ease;
+}
+
+.catalog-navbar-wrapper 
+.catalog-menu-option::after {
+    background: black;
+}
+
+.catalog-navbar-wrapper.catalog-navbar-scrolled 
+.catalog-menu-option::after {
+    background: var(--Dark-Ocean);
+}
+
+.catalog-menu-option:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* ==================== АДАПТИВНОСТЬ ==================== */
+
+@media (max-width: 1400px) {
+
+    .catalog-container {
+        padding-top: 5rem;
+    }
+
+    .catalog-navbar {
+        margin-left: clamp(var(--py-11), 5vw, var(--py-15));
+        margin-right: clamp(var(--py-11), 5vw, var(--py-11));
+    }
+
+    .catalog-logo {
+        max-width: 320px;
+    }
+
+    .catalog-menu {
+        gap: 0;
+    }
+
+    .catalog-menu-option {
+        font-size: var(--fs-4);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .catalog-navbar-wrapper.catalog-navbar-scrolled .catalog-navbar-container{
+        margin-top: -4rem;
+    }
+
+    .catalog-container {
+        padding-top: 4rem;
+    }
+
+    .catalog-navbar {
+        margin-left: clamp(var(--py-10), 5vw, var(--py-14));
+        margin-right: clamp(var(--py-10), 5vw, var(--py-10));
+    }
+
+    .catalog-logo {
+        margin-left: 0;
+        max-width: 290px;
+    }
+
+    .catalog-menu {
+        gap: 0;
+    }
+
+    .catalog-menu-option {
+        font-size: var(--fs-3);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .catalog-navbar {
+        margin-top: var(--py-1);
+        margin-left: clamp(var(--py-9), 5vw, var(--py-13));
+        margin-right: clamp(var(--py-8), 5vw, var(--py-10));
+    }
+    
+    .catalog-logo{
+        max-width: 260px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .catalog-navbar {
+        margin-left: clamp(var(--py-9), 5vw, var(--py-13));
+        margin-right: clamp(var(--py-8), 5vw, var(--py-10));
+    }
+
+    .catalog-menu-option{
+        font-size: var(--fs-2);
+    }
+
+    .catalog-logo{
+        max-width: 240px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .catalog-container{
+        padding-top: 3.catalog-5rem;
+    }
+
+    .catalog-navbar {
+        margin-left: clamp(var(--py-7), 5vw, var(--py-13));
+        margin-right: clamp(var(--py-6), 5vw, var(--py-10));
+    }
+    .catalog-logo {
+        max-width: 220px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .catalog-navbar-wrapper.catalog-navbar-scrolled .catalog-navbar-container{
+        margin-top: -3rem;
+        padding-bottom: 0.catalog-5rem;
+    }
+
+    .catalog-container {
+        padding-top: 3rem;
+    }
+    .catalog-navbar {
+        margin-left: clamp(var(--py-7), 5vw, var(--py-13));
+        margin-right: clamp(var(--py-6), 5vw, var(--py-10));
+    }
+
+    .catalog-logo {
+        max-width: 180px;
+    }
+
+    .catalog-menu-option {
+        font-size: var(--fs-1);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .catalog-container{
+        padding-top: 2.catalog-5rem;
+    }
+    .catalog-logo {
+        max-width: 160px;
+    }
+
+    .catalog-navbar {
+        margin-left: clamp(var(--py-7), 5vw, var(--py-13));
+        margin-right: clamp(var(--py-6), 5vw, var(--py-10));
+    }
+
+    .catalog-menu-option {
+        font-size: 0.catalog-6rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .catalog-container{
+        padding-top: 2.catalog-2rem;
+    }
+
+    .catalog-logo {
+        max-width: 130px;
+    }
+
+    .catalog-navbar {
+        margin-left: clamp(var(--py-6), 5vw, var(--py-13));
+        margin-right: clamp(var(--py-5), 5vw, var(--py-10));
+    }
+
+    .catalog-menu-option {
+        font-size: 0.catalog-6rem;
+    }
+}

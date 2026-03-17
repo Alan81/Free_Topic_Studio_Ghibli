@@ -1,0 +1,181 @@
+.pettern-hero {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-image-pattern,
+.bg-image-pattern-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-section {
+    position: relative;
+    z-index: 5;
+}
+
+.cloud-group {
+    position: relative;
+    z-index: 10;
+}
+
+.bg-image-pattern {
+    width: 96%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    margin-top: 2rem;
+}
+
+.bg-image-pattern-bottom {
+    width: 96%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    margin-top: 5rem;
+}
+
+.cloud-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -8rem;
+}
+
+.img-cloud-r{
+    width: 845px;
+    z-index: 10;
+}
+
+.img-cloud-l {
+    width: 680px;
+    z-index: 1;
+}
+
+@media (max-width: 1450px) {
+    .cloud-group{
+        margin-top: -8rem;
+    }
+    .img-cloud-l{
+        width: 600px;
+    }
+
+    .img-cloud-r {
+        width: 645px;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .cloud-group{
+        margin-top: -8rem;
+    }
+    .img-cloud-l{
+        width: 600px;
+    }
+
+    .img-cloud-r {
+        width: 645px;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .img-cloud-l{
+        width: 480px;
+    }
+
+    .img-cloud-r {
+        width: 575px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .img-cloud-l{
+        width: 430px;
+    }
+
+    .img-cloud-r {
+        width: 470px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .img-cloud-l{
+        width: 420px;
+    }
+
+    .img-cloud-r {
+        width: 470px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .cloud-group{
+        margin-top: -8rem;
+    }
+    .img-cloud-l{
+        width: 320px;
+    }
+
+    .img-cloud-r {
+        width: 420px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cloud-group{
+        margin-top: -7rem;
+    }
+    .img-cloud-l{
+        width: 280px;
+    }
+
+    .img-cloud-r {
+        width: 380px;
+    }
+}
+
+@media (max-width: 800px) {
+    .cloud-group{
+        margin-top: -6rem;
+    }
+    .img-cloud-l{
+        width: 310px;
+    }
+
+    .img-cloud-r {
+        width: 335px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cloud-group{
+        margin-top: -6rem;
+    }
+    .img-cloud-l{
+        width: 250px;
+    }
+
+    .img-cloud-r {
+        width: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cloud-group{
+        margin-top: -5rem;
+    }
+    .img-cloud-l{
+        width: 200px;
+    }
+
+    .img-cloud-r {
+        width: 230px;
+    }
+}

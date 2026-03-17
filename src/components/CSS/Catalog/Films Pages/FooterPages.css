@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+
+:root{
+    --White: #ffffff;
+    --Black: #000000;
+    --Dark-Ocean: #1C434A;
+    --Opal-Green: #054C44;
+    --Green:#057569;
+    --Light-greay-blue: #8FC6B7;
+    --Celestial-azure: #E8FFFD;
+    --Yellow-transparent: rgba(244, 219, 119, 0.5);
+    --Gradient-Yellow-green: linear-gradient(to top, #F7E187 0%, rgba(254, 246, 202, 0.6) 40%, rgba(177, 254, 246, 0.2) 70%, transparent 100%);
+
+
+    --ff-Cinzel-Decorative: 'Cinzel Decorative', 'sant-serif';
+    --ff-Albert-Sans: 'Albert Sans', 'sans-serif';
+    --fs-1: 0.75rem;
+    --fs-2: 1rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.5rem;
+    --fs-5: 1.75rem;
+    --fs-6: 2rem;
+
+    --py-1: 0.75rem;
+    --py-2: 1rem;
+    --py-3: 1.25rem;
+    --py-4: 1.5rem;
+    --py-5: 1.75rem;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style: none;}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {display: block;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {width: 100%;}
+
+button {cursor: pointer;}
+
+html {
+    font-family: var(--ff-Cinzel-Decorative);
+    font-size: var(--fs-2);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--White);
+    color: var(--Black);
+    font-size: var(--fs-4);
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:focus-visible {outline-offset: 4px;}
+
+::-webkit-scrollbar{
+    width: 1rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track { background: hsl(0, 0%, 95%);}
+
+::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%);}
+
+::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%);}
+
+/* ============================================================== */
+
+.footer_container {
+    background: var(--anime-footer-gradient, var(--Gradient-Yellow-green))
+}
+
+/* ============================================================= */
+
+
+.footer_sectionLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    flex-wrap: wrap;
+    font-size: 2.7rem;
+    padding-top: 8rem;
+    margin-bottom: -1rem;
+    z-index: 10;
+}
+
+
+.footer_uselfulLinks {
+    padding-top: 3rem;
+}
+
+.footer_Links {
+    display: flex;
+    font-size: var(--fs-5);
+    padding: 0.25rem;
+    gap: 0.5rem;
+}
+
+.bg-image-links{
+    height: 40px;
+}
+
+.footer_Links:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+.footer_name-links:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;   
+}
+
+/* =================================================================== */
+
+.bg-footer-pattern {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    margin-bottom: -3rem;
+    z-index: 5;
+}
+
+.footer_autor-logo{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.autorname {
+    padding-top: 1.5rem;
+    font-size: 2rem;
+}
+
+/* ================================================================== */
+
+@media screen and (max-width: 1500px) {
+    .footer_sectionLinks {
+        gap: 3rem;
+        font-size: 2.3rem;
+    }
+
+    .footer_Links {
+        font-size: var(--fs-4);
+    }
+
+    .footer_autor-logo{
+        margin: 3rem 5rem 0 5rem;
+        padding-bottom: 1rem;
+    }
+
+    .autorname {
+        padding-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .footer_sectionLinks {
+        font-size: 2rem;
+    }
+
+    .footer_Links {
+        font-size: var(--fs-3);
+    }
+
+    .bg-image-links {
+        max-width: 40px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .footer_sectionLinks {
+        font-size: 1.8rem;
+    }
+
+    .footer_autor-logo{
+        font-size: 2.5rem;
+    }
+
+    .autorname{
+        font-size: 1.8rem;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+    .footer_sectionLinks {
+        font-size: 1.4rem;
+    }
+
+    .footer_Links {
+        font-size: 1.2rem;
+        margin-bottom: -0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    
+    .footer_sectionLinks {
+        font-size: 1.3rem;
+        gap: 2rem;
+    }
+
+    .footer_uselfulLinks{
+        margin-top: -0.5rem;
+    }
+
+    .footer_Links {
+        font-size: 1.1rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .footer_autor-logo{
+        margin: 3rem 3rem 0 3rem;
+        font-size: 2rem;
+    }
+    .autorname {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    
+    .footer_sectionLinks {
+        gap: 5rem;
+        font-size: 1.9rem;
+    }
+
+    .footer_Links {
+        font-size: 1.2rem;
+        margin-bottom: -0.5rem;
+    }
+
+}
+

@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+
+:root{
+    --White: #ffffff;
+    --Black: #000000;
+    --Gray-gray: #3E3E3E;
+    --Dark-Ocean: #1C434A;
+    --Light-greay-blue: #8FC6B7;
+
+    --ff-Cinzel-Decorative: 'Cinzel Decorative', 'sant-serif';
+    --fs-1: 0.75rem;
+    --fs-2: 1rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.5rem;
+    --fs-5: 1.75rem;
+
+    --py-1: 0.75rem;
+    --py-2: 1rem;
+    --py-3: 1.25rem;
+    --py-4: 1.5rem;
+    --py-5: 1.75rem;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style: none;}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {display: block;}
+
+.h1,
+.h2,
+.h3,
+.h2-large {
+    color: var(--Black);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {width: 100%;}
+
+button {cursor: pointer;}
+
+html {
+    font-family: var(--ff-Cinzel-Decorative);
+    font-size: var(--fs-2);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--White);
+    color: var(--Black);
+    font-size: var(--fs-4);
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+:focus-visible {outline-offset: 4px;}
+
+::-webkit-scrollbar{
+    width: 1rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track { background: hsl(0, 0%, 95%);}
+
+::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%);}
+
+::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%);}
+
+/* -------------------------------------------------------- */
+
+.bg-container {
+    margin: 4.5rem 2.4rem;
+    border-left: 9px solid var(--Gray-gray);
+    border-right: 9px solid var(--Gray-gray);
+}
+
+.catalog-container-hero{
+    position: relative;
+    margin-top: 0rem;
+    padding-left: var(--py-1);
+    padding-right: var(--py-2);
+}
+
+
+.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================================================================== */
+
+.catalog-vertical-lines-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.catalog-pattern {
+    margin-bottom: -28rem;
+    margin-right: 2rem;
+    max-width: clamp(80px, 10vw, 130px);
+}
+
+.catalog-pattern-right{
+    margin-top: -30rem;
+    margin-left: 2rem;
+    max-width: clamp(80px, 11vw, 150px);
+}
+
+.catalog-poster-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 5vw, 6rem);
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    
+}
+
+.catalog-poster-card {
+    flex: 0 1 auto;
+    max-width: 200px;
+    transition: all 0.4s ease;
+}
+
+
+.catalog-img-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.catalog-poster-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0px;
+}
+
+
+.catalog-poster-card:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    .bg-container {
+        margin-left: clamp(1.2rem, 5vw, 1.8rem);
+        margin-right: clamp(1.2rem, 5vw, 1.8rem);
+    }
+
+    .catelog-poster-card {
+        max-width: 170px;
+    }
+
+    .catalog-pattern {
+        max-width: clamp(80px, 8vw, 130px);
+        margin-right: 1rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(80px, 9vw, 150px);
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .catalog-poster-card {
+        margin-top: -3rem;
+        max-width: 150px;
+    }
+
+    .catalog-pattern {
+        margin-bottom: -18rem;
+        margin-right: 1rem;
+    }
+
+    .catalog-pattern-right{
+        margin-top: -25rem;
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .catalog-poster-row {
+        gap: clamp(1rem, 4vw, 6rem)
+    }
+
+    .catalog-pattern {
+        max-width: clamp(80px, 7vw, 130px);
+        margin-bottom: -22rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(80px, 8vw, 150px);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .bg-container {
+        border-left: 7px solid var(--Gray-gray);
+        border-right: 7px solid var(--Gray-gray);
+        margin-left: clamp(1.2rem, 5vw, 1.5rem);
+        margin-right: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    .catalog-poster-card {
+        max-width: 140px;
+    }
+
+    .catalog-pattern {
+        max-width: clamp(80px, 7vw, 130px);
+        margin-bottom: -25rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(80px, 8vw, 150px);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .bg-container {
+        margin-top: 3rem;
+        margin-bottom: -2rem;
+        border-left: 6px solid var(--Gray-gray);
+        border-right: 6px solid var(--Gray-gray);
+        margin-left: clamp(1.2rem, 5vw, 1.5rem);
+        margin-right: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    .catalog-poster-card {
+        max-width: 120px;
+    }
+
+    .catalog-pattern {
+        max-width: clamp(20px, 7vw, 130px);
+        margin-bottom: -18rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(80px, 7vw, 150px);
+        margin-top: -20rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .bg-container {
+        margin-top: 3rem;
+        margin-bottom: -2rem;
+        border-left: 5px solid var(--Gray-gray);
+        border-right: 5px solid var(--Gray-gray);
+        margin-left: clamp(1.2rem, 5vw, 1.3rem);
+        margin-right: clamp(1.2rem, 5vw, 1.3rem);
+    }
+
+    .catalog-poster-card {
+        max-width: 100px;
+    }
+
+    .catalog-pattern {
+        max-width: clamp(20px, 7vw, 130px);
+        margin-bottom: -15rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(50px, 8vw, 150px);
+        margin-top: -16rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .bg-container {
+        margin-top: 2.5rem;
+        margin-bottom: -2.5rem;
+        border-left: 4px solid var(--Gray-gray);
+        border-right: 4px solid var(--Gray-gray);
+        margin-left: clamp(1.2rem, 5vw, 1.1rem);
+        margin-right: clamp(1.2rem, 5vw, 1.1rem);
+    }
+
+    .catalog-poster-card {
+        max-width: 90px;
+    }
+
+    .catalog-pattern {
+        max-width: clamp(20px, 6vw, 130px);
+        margin-bottom: -13rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(50px, 7vw, 150px);
+        margin-top: -15rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .bg-container {
+        margin-top: 1.8rem;
+        margin-bottom: -3.2rem;
+        border-left: 3.5px solid var(--Gray-gray);
+        border-right: 3.5px solid var(--Gray-gray);
+        margin-left: clamp(0.2rem, 5vw, 0.8rem);
+        margin-right: clamp(0.2rem, 5vw, 0.8rem);
+    }
+
+    .catalog-poster-card {
+        margin-top: -3.2rem;
+        max-width: 70px;
+    }
+
+    .catalog-pattern {
+        max-width: clamp(20px, 7vw, 130px);
+        margin-right: 0.5rem;
+        margin-bottom: -11rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(50px, 7vw, 150px);
+        margin-left: 0.5rem;
+        margin-top: -12rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .bg-container {
+        margin-top: 2rem;
+        margin-bottom: -3rem;
+        border-left: 3px solid var(--Gray-gray);
+        border-right: 3px solid var(--Gray-gray);
+        margin-left: clamp(0.2rem, 5vw, 0.7rem);
+        margin-right: clamp(0.2rem, 5vw, 0.7rem);
+    }
+
+    .catalog-poster-card {
+        margin-top: -3.2rem;
+        max-width: 70px;
+    }
+
+    .catalog-pattern {
+        max-width: clamp(20px, 7vw, 130px);
+        margin-right: 0.2rem;
+        margin-bottom: -11rem;
+    }
+
+    .catalog-pattern-right{
+        max-width: clamp(20px, 8vw, 150px);
+        margin-left: 0.2rem;
+        margin-top: -12rem;
+    }
+}
+
+/* ============================= MEDIA 555px==================================== */
