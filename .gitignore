@@ -1,24 +1,39 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# # Logs
+# logs
+# *.log
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# pnpm-debug.log*
+# lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# node_modules
+# dist
+# dist-ssr
+# *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# # Editor directories and files
+# .vscode/*
+# !.vscode/extensions.json
+# .idea
+# .DS_Store
+# *.suo
+# *.ntvs*
+# *.njsproj
+# *.sln
+# *.sw?
+
+# Зависимости
+node_modules/
+
+# Папка со сборкой
+dist/
+
+# Системные файлы Mac
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Логи
+*.log
+
+# Файлы окружения
+.env
