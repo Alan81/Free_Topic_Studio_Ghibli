@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../../CSS/Home/Navbar.css'
+import styles from '../../CSS/Home/Navbar.module.css'
 import Logo from "../../Image/Banner/Logo.png"
 
 const Menu = [
@@ -71,22 +71,18 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`navbar-container ${scrolled ? 'navbar-scrolled' : ''}`}>
-      <div className='container'>
-        <div className='navbar'>
-          <a href="#home" className='Logo' onClick={(e) => handleClick(e, '#home')}>
-            <img src={Logo} alt="Logo" className='logo'/>
+    <div className={`${styles['navbar-container']} ${scrolled ? styles['navbar-scrolled'] : ''}`}>
+      <div className={styles.container}>
+        <div className={styles.navbar}>
+          <a href="#home" className={styles.Logo} onClick={(e) => handleClick(e, '#home')}>
+            <img src={Logo} alt="Logo" className={styles.logo}/>
           </a>
           
-          <div className='section-menu'>
-            <ul className='menu'>
+          <div className={styles['section-menu']}>
+            <ul className={styles.menu}>
               {Menu.map((menu) => (
-                <li key={menu.id} className='menu-item'>
-                  <a 
-                    href={menu.link} 
-                    className={`menu-option ${activeLink === menu.link ? 'active' : ''}`}
-                    onClick={(e) => handleClick(e, menu.link)}
-                  >
+                <li key={menu.id} className={styles['menu-item']}>
+                  <a href={menu.link} className={`${styles['menu-option']} ${activeLink === menu.link ? styles.active : ''}`} onClick={(e) => handleClick(e, menu.link)}>
                     {menu.name}
                   </a>
                 </li>

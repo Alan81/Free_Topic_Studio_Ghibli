@@ -57,6 +57,7 @@ html {
     font-family: var(--ff-Cinzel-Decorative);
     font-size: var(--fs-2);
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
@@ -120,7 +121,7 @@ body {
 .poster-card {
     margin-top: 7rem;
     flex: 0 1 auto;
-    max-width: 240px;
+    max-width: 220px;
     transition: all 0.3s ease;
 }
 
@@ -141,7 +142,7 @@ body {
     display: block;
 }
 .poster-card-center {
-    max-width: 350px !important;
+    max-width: 320px;
     transform: scale(1.0);
     z-index: 2;
 }

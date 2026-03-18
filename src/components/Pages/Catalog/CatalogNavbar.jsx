@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import '../../CSS/Catalog/CatalogNavbar.css'
+import styles from '../../CSS/Catalog/CatalogNavbar.module.css'
 import Logo from "../../Image/Banner/Logo.png"
 
 const Menu = [
@@ -81,37 +81,39 @@ const CatalogNavbar = () => {
 
   const isActive = (menuItem) => {
     if (menuItem.type === "route") {
-
       return location.pathname === menuItem.link;
     } else {
-
       return activeAnchor === menuItem.link;
     }
   };
 
   return (
-    <div className={`catalog-navbar-wrapper ${scrolled ? 'catalog-navbar-scrolled' : ''}`}>
-      <div className='catalog-navbar-container'>
-        <div className='catalog-container'>
-          <div className='catalog-navbar'>
+    <div className={`${styles['catalog-navbar-wrapper']} ${scrolled ? styles['catalog-navbar-scrolled'] : ''}`}>
+      <div className={styles['catalog-navbar-container']}>
+        <div className={styles['catalog-container']}>
+          <div className={styles['catalog-navbar']}>
             
-            <Link to="/" className='catalog-Logo'>
-              <img src={Logo} alt="Studio Ghibli Logo" className='catalog-logo'/>
+            <Link to="/" className={styles['catalog-Logo']}>
+              <img src={Logo} alt="Studio Ghibli Logo" className={styles['catalog-logo']}/>
             </Link>
             
-            <div className='catalog-section-menu'>
-              <ul className='catalog-menu'>
+            <div className={styles['catalog-section-menu']}>
+              <ul className={styles['catalog-menu']}>
                 {Menu.map((menu) => (
-                  <li key={menu.id} className='catalog-menu-item'>
+                  <li key={menu.id} className={styles['catalog-menu-item']}>
                     {menu.type === "route" ? (
-
-                      <Link to={menu.link} className={`catalog-menu-option ${isActive(menu) ? 'active' : ''}`}>
+                      <Link 
+                        to={menu.link} 
+                        className={`${styles['catalog-menu-option']} ${isActive(menu) ? styles.active : ''}`}
+                      >
                         {menu.name}
                       </Link>
-                      
                     ) : (
-
-                      <a href={menu.link} className={`catalog-menu-option ${isActive(menu) ? 'active' : ''}`} onClick={(e) => handleAnchorClick(e, menu.link)}>
+                      <a 
+                        href={menu.link} 
+                        className={`${styles['catalog-menu-option']} ${isActive(menu) ? styles.active : ''}`} 
+                        onClick={(e) => handleAnchorClick(e, menu.link)}
+                      >
                         {menu.name}
                       </a>
                     )}

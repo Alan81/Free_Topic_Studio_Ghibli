@@ -138,7 +138,7 @@ body {
 .favPostersRow {
     width: 100%;
     padding: 4rem 2rem;
-    margin-top: -60rem;
+    margin-top: -54rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -161,7 +161,7 @@ body {
 
 .favPosterCard {
     flex: 0 1 auto;
-    max-width: 380px;
+    max-width: 350px;
     transition: all 0.3s ease;
     position: relative;
     display: flex;
@@ -177,7 +177,7 @@ body {
 .favPosterCentral {
     transform: translateY(-5rem);
     z-index: 10;
-    max-width: 400px;
+    max-width: 360px;
 }
 
 .favPosterCentral:hover {
@@ -189,7 +189,7 @@ body {
     height: auto;
     display: block;
     padding: 20px 15px;
-    border: 3.2px solid black;
+    border: 3px solid black;
     border-radius: 15rem;
     transition: all 0.3s ease;
     position: relative;

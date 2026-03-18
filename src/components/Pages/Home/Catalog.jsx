@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../../CSS/Home/Catalog.css'
+import styles from '../../CSS/Home/Catalog.module.css'
 import Img from '../../Image/Banner/Text-Catalog-Of-Works.png'
 import Bottom_Pattern from '../../Image/Pattern/Bottom pattern.png'
 import Top_Pattern from '../../Image/Pattern/Top pattern.png'
@@ -100,61 +100,61 @@ const Catalog = () => {
         : Poster.filter(poster => poster.genres.includes(selectedGenre));
 
     return (
-        <section id="catalog"  className='section'>
-            <div className='logContainer'>
-                <div className='logMainRow'>
+        <section id="catalog" className={styles.section}>
+            <div className={styles.logContainer}>
+                <div className={styles.logMainRow}>
 
-                    <div className='logBannerSection'>
-                        <img src={Img} alt="Catalog Banner" className='bg-log-banner' />
+                    <div className={styles.logBannerSection}>
+                        <img src={Img} alt="Catalog Banner" className={styles['bg-log-banner']} />
                     </div>
 
-                    <div className='CatalogRow'>
+                    <div className={styles.CatalogRow}>
 
-                        <div className='logGenresGrid'>
-                            <ul className='logGrid'>
-                                <li className={selectedGenre === "All" ? "active" : ""} onClick={() => setSelectedGenre("All")}>
+                        <div className={styles.logGenresGrid}>
+                            <ul className={styles.logGrid}>
+                                <li className={selectedGenre === "All" ? styles.active : ""} onClick={() => setSelectedGenre("All")}>
                                   All
                                 </li>
 
-                                <li className={selectedGenre === "Drama" ? "active" : ""} onClick={() => setSelectedGenre("Drama")}>
+                                <li className={selectedGenre === "Drama" ? styles.active : ""} onClick={() => setSelectedGenre("Drama")}>
                                   Drama
                                 </li>
 
-                                <li className={selectedGenre === "Fantasy" ? "active" : ""} onClick={() => setSelectedGenre("Fantasy")}>
+                                <li className={selectedGenre === "Fantasy" ? styles.active : ""} onClick={() => setSelectedGenre("Fantasy")}>
                                   Fantasy
                                 </li>
 
-                                <li className={selectedGenre === "Romantic" ? "active" : ""} onClick={() => setSelectedGenre("Romantic")}>
+                                <li className={selectedGenre === "Romantic" ? styles.active : ""} onClick={() => setSelectedGenre("Romantic")}>
                                     Romantic
                                 </li>
 
-                                <li className={selectedGenre === "Adventure" ? "active" : ""} onClick={() => setSelectedGenre("Adventure")}>
+                                <li className={selectedGenre === "Adventure" ? styles.active : ""} onClick={() => setSelectedGenre("Adventure")}>
                                     Adventure
                                 </li>
                             </ul>
                         </div>
 
-                        <div className='logPosterRow'>
-                            <img src={Top_Pattern} alt="Top Pattern" className='TopPattern'/>
+                        <div className={styles.logPosterRow}>
+                            <img src={Top_Pattern} alt="Top Pattern" className={styles.TopPattern}/>
 
-                            <div className='logPosterGrid'>
+                            <div className={styles.logPosterGrid}>
                                 {filteredPosters.map((poster) => (
-                                    <div key={poster.id} className="logPosterCard">
-                                        <Link to={poster.link} className='logPosterLink'>
-                                            <img src={poster.img} alt={`Poster ${poster.id}`} className='logPosterImage'/>
+                                    <div key={poster.id} className={styles.logPosterCard}>
+                                        <Link to={poster.link} className={styles.logPosterLink}>
+                                            <img src={poster.img} alt={`Poster ${poster.id}`} className={styles.logPosterImage}/>
                                         </Link>
                                     </div>
                                 ))}
                             </div> 
 
-                            <div className='logButton'>
-                                <Link to="/catalog" className='logButtonText'>
+                            <div className={styles.logButton}>
+                                <Link to="/catalog" className={styles.logButtonText}>
                                     View All Films →
                                 </Link>
                             </div>
                             
 
-                            <img src={Bottom_Pattern} alt="Bottom Pattern" className='BottomPattern' />
+                            <img src={Bottom_Pattern} alt="Bottom Pattern" className={styles.BottomPattern} />
                         </div>
 
                     </div>

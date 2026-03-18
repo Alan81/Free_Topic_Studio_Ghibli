@@ -1,0 +1,5 @@
+:root {
+  /* Определяем переменные для основных размеров */
+  --container-width: min(90%, 1200px);
+  --base-font-size: clamp(14px, 2vw, 16px);
+}

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react' 
-import '../../CSS/Catalog/CatalogSection.css'
+import styles from '../../CSS/Catalog/CatalogSection.module.css'
 import Img1 from '../../Image/Pattern/Catelog Banner Top Pattern.png'
 import Img2 from '../../Image/Pattern/Catalog Banner Bottom Pattern.png'
 import BgPattern from '../../Image/Pattern/Background.png'
@@ -33,10 +33,10 @@ const CatalogSection = () => {
       <CatalogNavbar/>
       
       <div style={bgPattern}>
-        <div className='pettern-hero' style={{ position: 'relative', zIndex: 1 }}>
-          <img src={Img1} alt="" className='bg-image-pattern'/>
+        <div className={styles['pettern-hero']} style={{ position: 'relative', zIndex: 1 }}>
+          <img src={Img1} alt="" className={styles['bg-image-pattern']}/>
           <CatalogHero/>
-          <img src={Img2} alt="" className='bg-image-pattern-bottom'/>
+          <img src={Img2} alt="" className={styles['bg-image-pattern-bottom']}/>
         </div>
         <CatalogFilms/>
         <CatalogAbout/>

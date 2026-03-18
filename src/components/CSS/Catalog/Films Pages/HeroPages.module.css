@@ -138,7 +138,7 @@ body {
 
 .hero__poster {
     flex: 0 1 auto;
-    max-width: 450px;
+    max-width: 400px;
     transition: all 0.4s ease;
 }
 
@@ -155,17 +155,17 @@ body {
 
 
 .hero__info-list{
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .hero__description{
-    font-size: 4rem;
+    font-size: 3.75rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);;
 }
 
 .hero__info-item{
-    padding: 8px 0;
-    font-size: 1.75rem;
+    padding: 5px 0;
+    font-size: 1.5rem;
     text-shadow: none;
 }
 
@@ -174,7 +174,7 @@ body {
     padding: 20px;
     border-radius: 2rem;
     background: var(--anime-accent, var(--Yellow-transparent));
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 300;
     border: 2px solid var(--anime-text-secondary, #3E3E3E);
     max-width: 800px;

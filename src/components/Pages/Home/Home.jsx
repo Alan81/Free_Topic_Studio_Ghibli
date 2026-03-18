@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import '../../CSS/Home/Home.css'
+import styles from '../../CSS/Home/Home.module.css'
 import Navbar from './Navbar'
 import Hero from './Hero'
 import Favorite from './Favorite'
@@ -68,13 +68,13 @@ const Home = () => {
 
   return (
     <div>
-      <div style={bgImage} >
-        <div  className=''>
+      <div style={bgImage}>
+        <div className={styles['container-hero']}>
           <Navbar/> 
           <Hero/>
-          <div className='cloud-group'>
-            <img src={Cloud_2} alt="" className='img-cloud-l'ref={cloudLeftRef}/>
-            <img src={Cloud} alt="" className='img-cloud-r'ref={cloudRightRef}/>  
+          <div className={styles['cloud-group']}>
+            <img src={Cloud_2} alt="" className={styles['img-cloud-l']} ref={cloudLeftRef}/>
+            <img src={Cloud} alt="" className={styles['img-cloud-r']} ref={cloudRightRef}/>  
           </div>
         </div>
       </div>
@@ -85,7 +85,6 @@ const Home = () => {
         <About/>
         <Footer/>
       </div>
-
     </div>
   )
 }

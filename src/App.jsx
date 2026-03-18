@@ -1,4 +1,5 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'  // измененный импорт
+import { HashRouter, Routes, Route } from 'react-router-dom' 
+import './App.css'
 import { useState } from 'react'
 import Home from './components/Pages/Home/Home'
 import CatalogSection from './components/Pages/Catalog/CatalogSection'

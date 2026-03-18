@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import '../CSS/Footer.css'
+import styles from '../CSS/Footer.module.css'
 import Img1 from '../Image/Pattern/Bottom Pattern Light.png'
 import littel_Star from '../Image/Pattern/Star Pattern.png'
 
@@ -64,65 +64,65 @@ const Footer = () => {
   }
 
   return (
-    <footer id="contacts" className='footer-section'>
-      <div className='exContainer'>
-        <div className='exMainRow'>
-          <div className='exSectionLinks'>
+    <footer id="contacts" className={styles['footer-section']}>
+      <div className={styles.exContainer}>
+        <div className={styles.exMainRow}>
+          <div className={styles.exSectionLinks}>
                         
-            <ul className='UselfulLinks'>
+            <ul className={styles.UselfulLinks}>
 
-              <li className='name-links'>Useful Links</li>
+              <li className={styles['name-links']}>Useful Links</li>
 
-              <li className='Links'>
-                <img src={littel_Star} alt="" className='bg-image-links'/>
-                <a href="#home" onClick={(e) => handleClick(e, '#home')} className='exTextLinks'>Home</a>
+              <li className={styles.Links}>
+                <img src={littel_Star} alt="" className={styles['bg-image-links']}/>
+                <a href="#home" onClick={(e) => handleClick(e, '#home')} className={styles.exTextLinks}>Home</a>
               </li>
                             
-              <li className='Links'>
-                <img src={littel_Star} alt="" className='bg-image-links'/>
-                <a href="/catalog" onClick={(e) => handleClick(e, '/catalog')} className='exTextLinks'>Catalog</a>
+              <li className={styles.Links}>
+                <img src={littel_Star} alt="" className={styles['bg-image-links']}/>
+                <a href="/catalog" onClick={(e) => handleClick(e, '/catalog')} className={styles.exTextLinks}>Catalog</a>
               </li>
-              <li className='Links'>
-                <img src={littel_Star} alt="" className='bg-image-links'/>
-                <a href="#about" onClick={(e) => handleClick(e, '#about')} className='exTextLinks'>About Us</a>
+              <li className={styles.Links}>
+                <img src={littel_Star} alt="" className={styles['bg-image-links']}/>
+                <a href="#about" onClick={(e) => handleClick(e, '#about')} className={styles.exTextLinks}>About Us</a>
               </li>
                         
             </ul>
                          
-            <ul className='developer'>
-              <li className='name-links'>Developer</li>
+            <ul className={styles.developer}>
+              <li className={styles['name-links']}>Developer</li>
 
-              <li className='Links'>
-                <img src={littel_Star} alt="" className='bg-image-links'/>
+              <li className={styles.Links}>
+                <img src={littel_Star} alt="" className={styles['bg-image-links']}/>
                 <a href="/" onClick={(e) => handleClick(e, '/')}>Alan81</a>
               </li>
-              <li className='Links'>
-                <img src={littel_Star} alt="" className='bg-image-links'/>
+              <li className={styles.Links}>
+                <img src={littel_Star} alt="" className={styles['bg-image-links']}/>
                 <a href="mailto:i28691149@gmail.com" onClick={(e) => handleClick(e, 'mailto:i28691149@gmail.com')}>i28691149@gmail.com</a>
               </li>
             </ul>
 
-            <ul className='Contacts'>
-              <li className='name-links'>Contacts</li>
+            <ul className={styles.Contacts}>
+              <li className={styles['name-links']}>Contacts</li>
 
-              <li className='Links'>
-                <img src={littel_Star} alt="" className='bg-image-links'/>
+              <li className={styles.Links}>
+                <img src={littel_Star} alt="" className={styles['bg-image-links']}/>
                 <a href="https://t.me/L_6464646" target="_blank" rel="noopener noreferrer" onClick={(e) => handleClick(e, 'https://t.me/L_6469812')}>Telegram: @L_6469812</a>
               </li>
-              <li className='Links'>
-                <img src={littel_Star} alt="" className='bg-image-links'/>
+              <li className={styles.Links}>
+                <img src={littel_Star} alt="" className={styles['bg-image-links']}/>
                 <a href="https://github.com/Alan81" target="_blank" rel="noopener noreferrer" onClick={(e) => handleClick(e, 'https://github.com/Alan81')}>Git Hub: Alan81</a>
               </li>
             </ul>
           </div>
 
-          <div className='exSectionPattern'>
-            <img src={Img1} alt="" className='bg-footer-pattern'/>
+          <div className={styles.exSectionPattern}>
+            <img src={Img1} alt="" className={styles['bg-footer-pattern']}/>
           </div>
 
-          <div className='autor-logo'>
-            <a href="#home" onClick={(e) => handleClick(e, '#home')} className='autorname'>Alan81</a>
-            <a href="/home" onClick={(e) => handleClick(e, '/home')} className='logofooter'>Studio Ghibli</a>
+          <div className={styles['autor-logo']}>
+            <a href="#home" onClick={(e) => handleClick(e, '#home')} className={styles.autorname}>Alan81</a>
+            <a href="/home" onClick={(e) => handleClick(e, '/home')} className={styles.logofooter}>Studio Ghibli</a>
           </div>
         </div>
       </div>

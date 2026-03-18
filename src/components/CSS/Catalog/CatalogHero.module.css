@@ -123,15 +123,15 @@ body {
 }
 
 .catalog-pattern {
-    margin-bottom: -28rem;
+    margin-bottom: -25rem;
     margin-right: 2rem;
-    max-width: clamp(80px, 10vw, 130px);
+    max-width: clamp(50px, 10vw, 120px);
 }
 
 .catalog-pattern-right{
-    margin-top: -30rem;
+    margin-top: -25rem;
     margin-left: 2rem;
-    max-width: clamp(80px, 11vw, 150px);
+    max-width: clamp(50px, 11vw, 140px);
 }
 
 .catalog-poster-row {
@@ -147,7 +147,7 @@ body {
 
 .catalog-poster-card {
     flex: 0 1 auto;
-    max-width: 200px;
+    max-width: 180px;
     transition: all 0.4s ease;
 }
 

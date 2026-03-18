@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../../CSS/Catalog/CatalogHero.css'
+import styles from '../../CSS/Catalog/CatalogHero.module.css'
 import Img1 from '../../Image/Banner/poster-7.png'
 import Img2 from '../../Image/Banner/poster-8.png'
 import Img3 from '../../Image/Banner/poster-9.png'
@@ -37,26 +37,26 @@ const Poster = [
 
 const CatalogHero = () => {
   return (
-    <section id="catalog-hero" className="catalog-hero-section"> 
-      <div className='bg-container'>
+    <section id="catalog-hero" className={styles['catalog-hero-section']}> 
+      <div className={styles['bg-container']}>
         <div></div>
-          <div className='catalog-container-hero'>
+          <div className={styles['catalog-container-hero']}>
             
-            <div className="catalog-corner-container">
+            <div className={styles['catalog-corner-container']}>
               
-              <div className="catalog-vertical-lines-container">
-                <div className="catalog-vertical-line left-line">
-                  <img src={Studio} alt="" className='catalog-pattern'/>
+              <div className={styles['catalog-vertical-lines-container']}>
+                <div className={`${styles['catalog-vertical-line']} ${styles['left-line']}`}>
+                  <img src={Studio} alt="" className={styles['catalog-pattern']}/>
                 </div>
                 
-                <div className='catalog-poster-row'>
+                <div className={styles['catalog-poster-row']}>
                   {Poster.map((poster) => (
-                    <Link to={poster.link}>
+                    <Link to={poster.link} key={poster.id}>
                     
-                      <div className='catalog-poster-card' key={poster.id}>
-                        <div className='catalog-poster-container'>
-                          <div className='catalog-poster'>
-                            <img src={poster.img} alt={poster.text} className='catalog-img-poster' />
+                      <div className={styles['catalog-poster-card']}>
+                        <div className={styles['catalog-poster-container']}>
+                          <div className={styles['catalog-poster']}>
+                            <img src={poster.img} alt={poster.text} className={styles['catalog-img-poster']} />
                           </div>
                         </div>
                       </div>
@@ -64,8 +64,8 @@ const CatalogHero = () => {
                   ))}
                 </div>
                 
-                <div className="catalog-vertical-line right-line">
-                  <img src={Ghibli} alt="" className='catalog-pattern-right'/>
+                <div className={`${styles['catalog-vertical-line']} ${styles['right-line']}`}>
+                  <img src={Ghibli} alt="" className={styles['catalog-pattern-right']}/>
                 </div>
               </div>
               
