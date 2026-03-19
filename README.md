@@ -1,16 +1,38 @@
-# React + Vite
+Обновлённая версия сайта, созданного в рамках курсовой работы.
+Изначальный проект был утерян, но переработан с нуля с упором на визуал и адаптивность.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Полная адаптация экранов от 1500px до 600px
+Адаптация под мобильные устройства — в процессе
+Улучшенный интерфейс и внимание к деталям
 
-Currently, two official plugins are available:
+Update:
+Mar 3, 2026
+- Подключили BrowserRouter
+- Добавлена навигация по CatalogSection
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Mar 12, 2026
+feat: добавить динамические страницы аниме с общими компонентами и навигацией
 
-## React Compiler
+- Добавить файл animeData.js с начальными данными для 3 аниме (The Boy And The Heron, Spirited Away, The Wind Rises)
+- Создать переиспользуемые компоненты страниц с динамическим переключением данных на основе ID аниме
+- Реализовать структуру навигации:
+  * Home -> HeroPages (секция с постером и описанием)
+  * Catalog -> CatalogFilms (галерея всех постеров аниме)
+  * Gallery -> GalleryPages (галерея сцен из аниме)
+  * Contacts -> FooterPages (ссылки на автора и навигация между страницами)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Mar 14, 2026
+feat: добавить страницы аниме и связать с ними постеры
 
-## Expanding the ESLint configuration
+- Подключение 8 новых страниц для аниме
+- Подключение ссылок навигации в FooterPages
+- Подключение навигации с постеров на соответствующие страницы аниме:
+  * Постеры в разделах Hero и Favorite (Home) теперь кликабельны
+  * Постеры в разделе CatalogHero (CatalogSection) ведут на страницы аниме
+ 
+Mar 17, 2026
+fix: исправить конфигурацию проекта для деплоя на GitHub Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Пересоздание проекта с корректной начальной конфигурацией
+- Исправление ошибки, возникшую при первой попытке деплоя
+- Подготовление корректную структуру для GitHub Pages
