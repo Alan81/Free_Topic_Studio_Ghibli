@@ -294,11 +294,11 @@ body {
     }
     
     .favPosterCard {
-        max-width: 300px;
+        max-width: 280px;
     }
     
     .favPosterCentral {
-        max-width: 330px;
+        max-width: 300px;
         transform: translateY(-4rem);
     }
     
